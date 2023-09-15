@@ -7,7 +7,6 @@ function App() {
   const [showAll, setShowAll] = useState(false);
   const [products, setProducts] = useState([]);
   const [user, setUser] = useState([]);
-  const [names, setNames] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -31,7 +30,6 @@ function App() {
     <div className="App">
     <header>
       <h2>¡Bienvenido, {user.username}!</h2> 
-      
       <div className='userData'>{user.name != null ? user.name.firstname[0]+user.name.lastname[0] : ''}</div> 
     </header>
     
