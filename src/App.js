@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/users/1')
+    fetch('https://fakestoreapi.com/users/9')
       .then((response) => response.json())
       .then((data) => setUser(data));
   }, [])
