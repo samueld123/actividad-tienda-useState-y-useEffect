@@ -1,56 +1,19 @@
-import './App.css';
-import { useEffect , useState} from 'react';
-import ProductCard from './ProductCard.jsx';
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Stock from "./Components/Stock/Stock";
+import Cart from "./Components/Cart/Cart.jsx";
+import ProductPreview from "./Components/ProductPreview/ProductPreview";
+import { Routes, Route } from "react-router-dom";
 
-
-function App() {
-  const [showAll, setShowAll] = useState(false);
-  const [products, setProducts] = useState([]);
-  const [user, setUser] = useState([]);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
-  }, []);
-
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/users/9')
-      .then((response) => response.json())
-      .then((data) => setUser(data));
-  }, [])
-
-  function handleClick() {
-    setShowAll(!showAll);
-  }
-
-  // 
-
+export default function App() {
   return (
     <div className="App">
-    <header>
-      <h2>¡Bienvenido, {user.username}!</h2> 
-      <div className='userData'>{user.name != null ? user.name.firstname[0]+user.name.lastname[0] : ''}</div> 
-    </header>
-    
-      <div className='productContainer'> 
-      {
-        showAll ?
-        products.map((product) => (
-          <ProductCard product = {product} ></ProductCard>
-        )):
-        products.filter((product) => { 
-          if (product.id < 10){
-            return product
-          }}).map((product) => (
-          <ProductCard product = {product} ></ProductCard>
-        )) 
-      }
-      </div>
-    <button onClick={handleClick}>{showAll ? "Ver menos" : "Ver más"}</button>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Stock />} />
+        <Route exact path="/products/:id" element={<ProductPreview />} />
+        <Route exact path="/cart/" element={<Cart />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
-

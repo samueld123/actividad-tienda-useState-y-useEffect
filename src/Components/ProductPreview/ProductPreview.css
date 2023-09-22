@@ -1,0 +1,53 @@
+.preview-card {
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--font);
+    border-radius: 10px;
+    align-items: center;
+}
+
+.preview-card-text {
+    align-self: baseline;
+    padding: 0;
+    font-size: 0;
+    max-width: 30%;
+}
+
+.preview-card-titles {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+    color: grey;
+}
+
+.preview-card-description {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.preview-img {
+    max-width: 25%;
+    height: auto;
+}
+
+.preview-back-button {
+    border: 0px;
+    background-color: transparent;
+    justify-self: baseline;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .preview-card {
+        flex-direction: column;
+    }
+    .preview-card-text{
+        max-width: none;
+    }
+}
