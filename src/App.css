@@ -1,75 +1,41 @@
-.App{
+.App {
   display: flex;
   flex-direction: column;
   padding: 20px;
   background-color: #f4f4f4;
   align-items: center;
+  min-height: 100vh;
 }
 
-header{
-  display: flex;
-  width: 88vw;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.userData{
-  border-radius: 50%;
-  width: 34px;
-  height: 34px;
-  padding: 10px;
-  background: white;
-  border: 1px black;
-  color: black;
+p {
   text-align: center;
-  font: 32px Arial, sans-serif;
+  margin: 0;
 }
 
-.productContainer{
-  padding: 5px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  grid-auto-rows: minmax(100px, 1fr);
-  margin-bottom: 20px;
-}
-
-.card{
-  background-color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  font-family: var(--font);
-  border-radius: 10px;
-  align-items: center;
-  flex-direction: column;
-}
-img{
-  height: 22vh;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-p{
-  text-align: center;
-}
-button{
+button {
   background-color: white;
   border-radius: 10px;
   height: 40px;
   width: 120px;
+  cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  .productContainer { grid-template-columns: repeat(1, 1fr); }
-  .card { width: 78vw; }
-  
-  img{
-      height: 15vh;
-      width: auto;
-  }
+h3 {
+  margin: 0;
 }
 
-@media (min-width: 1080px) {
-  .productContainer { grid-template-columns: repeat(3, 1fr); }
+h4 {
+  margin: 0;
+}
+
+.buttons-field{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.operation-buttons{
+  border: 0;
+  width: 35px;
 }

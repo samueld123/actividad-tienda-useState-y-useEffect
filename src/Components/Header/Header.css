@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    width: 88vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-side{
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user-data {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: 10px;
+    background: white;
+    border: 1px black;
+    color: black;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+}
