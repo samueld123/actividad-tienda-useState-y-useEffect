@@ -9,6 +9,7 @@
 
 p {
   text-align: center;
+  margin: 0;
 }
 
 button {
@@ -17,4 +18,24 @@ button {
   height: 40px;
   width: 120px;
   cursor: pointer;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+.buttons-field{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.operation-buttons{
+  border: 0;
+  width: 35px;
 }

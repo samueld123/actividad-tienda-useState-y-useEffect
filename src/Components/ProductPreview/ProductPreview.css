@@ -10,7 +10,6 @@
 
 .preview-card-text {
     align-self: baseline;
-    padding: 0;
     font-size: 0;
     max-width: 30%;
 }
@@ -30,8 +29,10 @@ h3 {
 }
 
 .preview-img {
-    max-width: 25%;
-    height: auto;
+    float: left;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
 }
 
 .preview-back-button {
@@ -47,7 +48,13 @@ h3 {
     .preview-card {
         flex-direction: column;
     }
-    .preview-card-text{
+
+    .preview-card-text {
         max-width: none;
+    }
+
+    .preview-img {
+        width: 200px;
+        height: 200px;
     }
 }
